@@ -14,8 +14,20 @@ builder.Services.AddHttpClient("ai", client =>
     client.BaseAddress = new Uri(aiBasedUrl);
 });
 
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("ReactApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173")
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials();
+    });
+});
+
 var app = builder.Build();
 
+app.UseCors("ReactApp");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

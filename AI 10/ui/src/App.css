@@ -182,3 +182,87 @@
     border-right-color: var(--border);
   }
 }
+
+.app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #764ba2;
+  padding: 20px;
+  min-height: 100vh;
+}
+.container{
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1{
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & label{
+    font-weight: 600;
+    color: #555;
+    font-size: .95rem;
+  }
+
+  & input, select{
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  & select{
+    cursor: pointer;
+  }
+}
+
+.submit-button{
+  padding: 14px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+  }
+}
+
+.result{
+  margin-top: 30px;
+  padding: 20px;
+  background: #764ba2;
+  border-radius: 6px;
+  text-align: center;
+  & h2{
+    color: #fff;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+}
+
